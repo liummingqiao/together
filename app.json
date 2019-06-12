@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/welcome/welcome", 
+    "pages/first/first",
+    "pages/home/home",
+    "pages/questions/ti/ti",
+    "pages/rankinglist/rankinglist",
+    "pages/index/index",
+    "pages/denglu/denglu",
+    "pages/rankinglist/youself/youself",
+    "pages/questions/questions",
+    "pages/logs/logs",
+    "pages/denglu_zhongjian/denglu_zhongjian",
+    "pages/questions/lv/lv"
+  ],
+  "tabBar": {
+    "color": "#666",
+    "borderStyle": "white",
+    "selectedColor": "#268dcd",
+    "backgroundClolr": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/questions/questions",
+        "iconPath": "pages/images/icon_CSR.png",
+        "selectedIconPath": "pages/images/icon_CSR_HL.png",
+        "text": "试题"
+      },
+      {
+        "pagePath": "pages/rankinglist/rankinglist",
+        "iconPath": "pages/images/icon_CWS.png",
+        "selectedIconPath": "pages/images/icon_CWS_HL.png",
+        "text": "排行榜"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "pages/images/iconfont-18.png",
+        "selectedIconPath": "pages/images/overwork.png",
+        "text": "我的"
+      }
+    ],
+    "usingComponents": {}
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2D3F55",
+    "navigationBarTitleText": "一起考状元",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

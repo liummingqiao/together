@@ -1,0 +1,8 @@
+<!--pages/Addface/Addface.wxml-->
+<view class='bgcolor'>
+<image class='image1' src='{{image1}}'></image>
+<view>添加人脸数据</view>
+<text class='text1'>请保持脸部在明亮的光线下，并正面对着手机</text>
+<image class='image2' src='{{image2}}'></image>
+<image class='image3' src='{{image3}}' bindtap='zhaoxiang'></image>
+</view> 

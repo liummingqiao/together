@@ -1,0 +1,4 @@
+<!--pages/welcome/welcome.wxml-->
+<text>pages/welcome/welcome.wxml</text>
+<button bindtap='dianji'></button>
+<button bindtap='dianji' >人脸登录</button>

@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class='bady'>
+<view class="container">
+  <view class="userinfo">
+  <view class='brd'>一起考状元</view>
+    <button wx:if="{{!hasUserInfo}}" lang="zh_CN" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <!-- 用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与wx.getUserInfo返回的一致，open-type="getUserInfo"时有效 -->
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class='bntkuang'>
+      <button bindtap='denglu' wx-if="{{ pd ==  true }}" >人脸登录</button>
+      <button bindtap='zhuce' wx-if="{{pd == false }}" >人脸注册</button>
+    </view>
+    </block>
+  </view>
+  
+  
+</view>
+</view>

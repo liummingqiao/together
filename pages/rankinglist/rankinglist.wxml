@@ -1,0 +1,24 @@
+<view class='body'>
+    <view class='top clearfix'>
+        <view class='paihangbang'>答题排行榜(前50名)</view>
+        <!-- 这需要给分享添加分享功能 -->
+        <view class='fenxiang'>分享</view>
+    </view>
+<!-- v-for从这开始 -->
+    <view class='yonghukuang'  wx:for="{{phb}}"  wx:for-item="log"  >
+        <view class=''>
+        <!-- 这边是index -->
+            <text class='paiming'>{{index+1}}</text>
+            <!-- 这是获取数据库里用户头像的部分 -->
+            <image class='yonghutouxiang fl' src="{{log.avatar}}"></image>
+        </view>
+        <view class='yonghuzi' catchtap='tiaozhuan' data-id='{{log.id}}'>
+            <view class='yonghuming'>{{log.nike_name}}</view>
+            <view class='fr'>{{dengji[index]}}<text class='fenshu' data-text='{{log.total_score}}'>{{log.total_score}}</text></view>
+            <!-- <open-data type='log.privince' lang="zh_CN"></open-data> -->
+            <view class='chengshi'>{{log.privince}}</view>
+        </view>
+    </view>
+<!-- 在这结束 -->
+</view>
+

@@ -1,0 +1,19 @@
+<!--pages/denglu/denglu.wxml-->
+<view>
+<camera
+ device-position="front"
+ flash="off"
+ binderror="error"
+ style="width:400rpx; height: 400rpx;   border-radius: 50%; margin: 0 auto ;"
+></camera>
+</view>
+
+<view class='yulan' style='text-align:center '>预览</view>
+    <view class='tutu'>
+        <image mode="widthFix" src="{{src}}"></image>
+    </view>
+    <view>
+        <view >匹配用户：{{msg2}}</view>
+        <view >相似指数：{{msg}}</view>
+    </view>
+<button class="btn" bindtap="takePhoto">扫脸登录</button>

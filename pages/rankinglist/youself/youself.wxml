@@ -1,0 +1,28 @@
+<view class='body'>
+  <view class='clearfix'>
+    <view class='fenshu fr'>{{zong.answerRanking.total_score}}</view>
+    <view class='yonghutouxiang'>
+      <image class='yonghutouxiang' src='{{zong.answerRanking.avatar}}'></image>
+    </view>
+    <view class='yonghuming'>{{zong.answerRanking.nike_name}}</view>
+  </view>
+  <view class='shanchangzhishi'>擅长知识领域:
+    <text  wx:if="{{pd}}">暂时没有答题记录</text>
+    <text>{{zong.answerRecord[0].knowledge_area}}</text>
+    <text>{{zong.answerRecord[1].knowledge_area}}</text>
+    <text>{{zong.answerRecord[2].knowledge_area}}</text>
+  </view>
+  <view class='dengji'>
+    <text>答题状元</text>进阶之路</view>
+  <!-- v-for这开始 -->
+  <view class='wujilu'  wx:if="{{pd}}">暂无答题记录</view>
+  <view class='datixiangqing' wx:for="{{zong.userDayAnswer}}" wx:for-item="log">
+    <view>{{log.answer_date}}</view>
+    <view class='tixiangqing'>
+      <text>答题: {{log.total_answer_number}}</text>
+      <text>累计得分: {{log.day_total_score}}</text>
+      <text class='fensezi'>{{dengji[index]}}</text>
+    </view>
+  </view>
+  <!-- v-for这结束 -->
+</view>

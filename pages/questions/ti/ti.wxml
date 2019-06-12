@@ -1,0 +1,32 @@
+<!--pages/rankinglist/youself/youself.wxml-->
+<view class='body'>
+  <view animation="{{ani}}">
+    <view class='jiajiafen duifen' wx:if="{{anm == true}}">+10</view>
+    <view class='jiajiafen cuofen' wx:if="{{anm == false}}">-0</view>
+  </view>
+  <view class='top'>
+    <text class='duicuozi'>答对<text class='duifen'>+10分</text></text>
+    <text class='duicuozi'>答错<text class='cuofen'>-0分</text></text>
+    <text class='fenshu fr'>{{grade}}</text>
+  </view>
+  <!-- 题干部分 -->
+  <view>
+    <view class='wentikuang'>
+      <text class='tileixing'>【单选题】</text>{{timu}}
+      <text class='biaoqian'>({{type}})</text>
+    </view>
+    <view class='xuanze'>
+      <block wx:for="{{options}}" wx:for-item="log">
+        <view class='xuanxiangzi clearfix'>
+          <icon type="success" size="30" wx:if="{{log.id == true}}" />
+          <icon type="cancel" size="30" wx:if="{{log.id == false}}" />
+          <text class='xuanxiang fl' data-text='{{log.option}}' catchtap='dati' data-index='{{index}}' wx:if="{{log.id != true && log.id != false}}">{{log.option}}
+          </text>
+          <view class='xuanzeneirong fl'>{{log.optionContent}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='zhengquedana' wx:if="{{anm !== null}}">正确答案:{{back}}</view>
+  <button bindtap='denglu' wx:if="{{anm !== null}}">下一题</button>
+</view>

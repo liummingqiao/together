@@ -1,0 +1,79 @@
+/* pages/rankinglist/rankinglist.wxss */
+page{
+    height: 100%;
+}
+.body{
+    height: 100%;
+    background-color: #2D3F55;
+}
+/* 分享和答题排行榜的样式 */
+.top{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #2D3F55;
+    border-bottom-color: white;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+}
+.fenxiang{
+    float: right;
+    padding-right: 70rpx;
+}
+.paihangbang{
+    padding-left: 100rpx;
+    display: inline-block;
+}
+/* 清除浮动 */
+.clearfix{
+	clear: both;
+	overflow: hidden;
+	zoom: 1;
+}
+/* 头像样式 */
+.yonghutouxiang{
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50%;
+    margin-left: 60rpx;
+}
+/* 排名样式 */
+.paiming{
+    color: white;
+    font-size: 20px;
+    line-height: 100rpx;
+    display: inline-block;
+    float: left;
+    margin-left: 60rpx;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.yonghuzi{
+    color: white;
+    font-size: 14px;
+}
+.yonghuming{
+    margin-left: 280rpx;
+}
+.chengshi{
+    margin-top: 40rpx;
+    margin-left: 280rpx;
+}
+.yonghukuang{
+    margin-top: 30rpx;
+    padding-bottom: 20rpx;
+    border: 1px solid #2D3F55;
+    border-bottom-color: white;
+}
+.fenshu{
+  text-align: center;
+    display:inline-block;
+    color: #EBC91E;
+    margin-left: 60rpx;
+    margin-right: 60rpx;
+    width: 100rpx;
+}

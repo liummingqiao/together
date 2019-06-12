@@ -1,0 +1,29 @@
+/* pages/denglu/denglu.wxss */
+page{
+  height: 100% ;
+  background-color: #2D3F55;
+}
+view{
+    color: white;
+    font-size: 16px;
+}
+.btn {
+  color: white;
+  width: 300rpx;
+  background: #009A9A;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top:150rpx;
+}
+
+.tutu{
+  margin-top:50rpx;
+  margin-left: 225rpx;
+}
+.tutu image {
+  width: 300rpx;
+  height: 300rpx;
+}
+.yulan{
+    margin-top: 50rpx;
+}

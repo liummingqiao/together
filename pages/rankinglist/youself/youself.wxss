@@ -1,0 +1,79 @@
+page{
+    height: 100%;
+    background-color: #2D3F55;
+}
+.body{
+    height: 100%;
+}
+/* 头像样式 */
+image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 auto;
+}
+/* 头像居中 */
+.yonghutouxiang{
+   width: 100rpx;
+   margin: 0 auto;
+}
+.fenshu{
+    color: #EBC91F;
+}
+.yonghuming{
+    color: white;
+    text-align: center;
+}
+/* 擅长领域一行 */
+.shanchangzhishi{
+    width: 650rpx;
+    padding-top: 30rpx;
+    margin: 0 auto;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 30rpx;
+}
+.shanchangzhishi>text{
+    margin-left: 50rpx;
+}
+/* 答题等级一行 */
+.dengji{
+    width: 650rpx;
+    margin: 0 auto;
+    color: white;
+    font-size: 16px;
+}
+.dengji>text{
+    color: #FF6C9E;
+    font-size: 16px;
+    margin-right: 50rpx;
+}
+.datixiangqing{
+    width: 650rpx;
+    margin: 0 auto;
+    color: white;
+    font-size: 13px;
+}
+.tixiangqing{
+    display: flex;
+    margin-top: 30rpx;
+}
+.tixiangqing>text{
+    flex: 1;
+}
+.fensezi{
+    color: #FF6C9E;
+    text-align: center;
+}
+.datixiangqing{
+    margin-top: 30rpx;
+    padding-bottom: 30rpx;
+    border: 1px solid #2D3F55;
+    border-bottom-color: white;
+}
+.wujilu{
+  color: white;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}

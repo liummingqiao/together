@@ -1,0 +1,23 @@
+/* pages/AddFaceDate/AddFaceDate.wxss */
+.bgcolor{
+ 
+}
+.image1{
+  width: 50rpx;
+  height: 50rpx;
+}
+.text1{
+  font-size: 30rpx;
+}
+.image2{
+  margin-top: 50rpx;
+  width: 100%;
+  height: 600rpx;
+}
+
+.image3{
+  margin-top: 100rpx;
+  width:100rpx;
+  height: 100rpx;
+  margin-left: 350rpx;
+}

@@ -1,0 +1,12 @@
+<view class='body'>
+    <view class='yonghuixinxi clearfix'>
+        <image class='yonghutouxiang fl' src='{{src}}'></image>
+        <view class='dibian'>
+            <view class='yonghuming'>{{nickName}}</view>
+            <text class='dangqiandnengji'>当前等级:</text><text class='dengji'>{{level}}</text><text class='wenhao' bindtap='lv'>?</text>
+            <text class='fenshu'>{{score}}</text>
+        </view>
+    </view>
+    <view class='brd'>一起考状元</view>
+    <button bindtap='denglu'>开始答题</button>
+</view>

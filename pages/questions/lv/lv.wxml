@@ -1,0 +1,12 @@
+<view class='body'>
+    <view class='dakuang'>
+        <view class='dengjishuoming'>等级规则说明:</view>
+        <view class='dengji'><text>等级一 :　答题小白</text><text class='jifen'>积分: 　0 - 29 </text></view>
+        <view class='dengji'><text>等级二 :　答题书童</text><text class='jifen'>积分: 　30 - 59 </text></view>
+        <view class='dengji'><text>等级三 :　答题秀才</text><text class='jifen'>积分: 　60 - 99 </text></view>
+        <view class='dengji'><text>等级四 :　答题举人</text><text class='jifen'>积分: 　100 - 149 </text></view>
+        <view class='dengji'><text>等级五 :　答题探花</text><text class='jifen'>积分: 　150 - 209 </text></view>
+        <view class='dengji'><text>等级六 :　答题榜眼</text><text class='jifen'>积分: 　210 - 279 </text></view>
+        <view class='dengji'><text>等级七 :　答题状元</text><text class='jifen'>积分: 　280++ </text></view>
+    </view>
+</view>

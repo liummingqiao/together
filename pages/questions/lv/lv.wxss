@@ -1,0 +1,19 @@
+/* pages/questions/lv/lv.wxss */
+page{
+    height: 100%;
+}
+.dakuang{
+    width: 680rpx;
+    margin: 0 auto;
+    font-size: 16px;
+}
+.dengji{
+    color: white;
+    margin-top: 50rpx;
+}
+.jifen{
+    margin-left: 50rpx;
+}
+.dengjishuoming{
+    color: #B9B9B9;
+}

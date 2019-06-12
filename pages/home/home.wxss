@@ -1,0 +1,131 @@
+/* pages/home/home.wxss */
+/* 上半部分 */
+.top{
+    background-color: #2D3F55;
+    height: 490rpx;
+}
+/* 头像样式 */
+.yonghutouxiang{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin-left: 100rpx;
+}
+/* 用户名样式 */
+.yonghuming{
+    line-height: 100rpx;
+    color: white;
+    margin-left: 230rpx;
+    font-size: 16px;
+}
+.fl{
+    float: left;
+}
+/* 清除浮动 */
+.clearfix{
+	clear: both;
+	overflow: hidden;
+	zoom: 1;
+}
+/* 等级字 */
+.dengjizi{
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50rpx;
+}
+/* 分数一行 */
+.fenshuyihang{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 40rpx;
+}
+/* 名次左边距 */
+.mingcizuobianju{
+    margin-left: 20rpx;
+}
+/* 题数字一行 */
+.tishuyihang{
+    display: flex;
+}
+/* 答题总量及数字的样式 */
+.tishuyihang>text{
+    flex: 1;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30rpx;
+    font-weight: 600;
+}
+/* 擅长知识领域 */
+.shanchangzhishi{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30rpx;
+    font-weight: 600;
+}
+.shanchangzhishi>text{
+    margin-left: 20rpx;
+}
+/* 段位上升下降一块 */
+.shengji{
+    color: #27F0DD;
+    font-weight: 600;
+}
+.jiangji{
+    color: #E83A40;
+    font-weight: 600;
+}
+.duanwei{
+    margin-top: 40rpx;
+    margin-left: 170rpx;
+    font-size: 14px;
+}
+.duanwei>text{
+    margin-left: 30rpx;
+}
+.dwno2{
+    padding-bottom: 30rpx;
+}
+/* 段位底边框 */
+.duanweikuang{
+  border-bottom: 1px solid silver;
+}
+
+.meicidatixinxiwaikuang{
+    font-size: 14px;
+}
+.meicidatixinxineikuang{
+    border-bottom: 1px solid silver;
+}
+/* 底部答题情况边距 */
+.zuobianju{
+    padding-left: 50rpx; 
+}
+/* 得分的颜色 */
+.defen{
+    border: 1px solid res;
+    color: #FF568F;
+    font-weight: 600;
+}
+.meicidatixinxi{
+    display: flex;
+    width: 90%;
+    padding: 25rpx;
+    justify-content: space-between;
+}
+.meicidatixinxi text{
+  width: 25%;
+}
+.yidiandian{
+    color: #a2a2a2;
+    font-weight: 600;
+}
+.cl{
+  clear: both;
+  color: black;
+  font-size: 20px;
+}

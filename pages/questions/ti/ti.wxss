@@ -1,0 +1,160 @@
+/* pages/questions/ti/ti.wxss */
+
+/* pages/rankinglist/youself/youself.wxss */
+
+page {
+  height: 100%;
+  background-color: #2d3f55;
+  position: relative;
+}
+
+.body {
+  height: 100%;
+}
+
+.jiajiafen {
+  position: absolute;
+  font-size: 14px;
+  left: 650rpx;
+}
+
+/* 左浮动*/
+
+.fr {
+  float: right;
+}
+
+/* 清除浮动 */
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.top {
+  color: white;
+  font-size: 14px;
+  margin-top: 70rpx;
+}
+
+.duicuozi {
+  font-weight: 600;
+  margin-left: 50rpx;
+}
+
+/* 加分的分数样式 */
+
+.duifen {
+  font-weight: 400;
+  color: #32e2d5;
+}
+
+/* 减分的分数样式 */
+
+.cuofen {
+  font-weight: 400;
+  color: #d05855;
+}
+
+/* 分数的样式 */
+
+.fenshu {
+  margin-right: 50rpx;
+  color: #eeca2d;
+}
+
+/* 题类型的样式 */
+
+.tileixing {
+  color: #eeca2d;
+}
+
+/* 问题一大框 */
+
+.wentikuang {
+  width: 700rpx;
+  margin: 0 auto;
+  font-size: 17px;
+  color: white;
+  margin-top: 50rpx;
+}
+
+/* 选项 */
+
+.xuanze {
+  color: white;
+  width: 700rpx;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+/* 选项钮 */
+
+.xuanxiang {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 0 20rpx;
+}
+
+/* 选项字 */
+
+.xuanxiangzi {
+  margin-top: 30rpx;
+  display: inline-block;
+}
+
+.xuanzeneirong {
+  display: inline-block;
+  width: 600rpx;
+}
+
+.fl {
+  float: left;
+}
+
+/* 清除浮动 */
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.zhengquedana {
+  color: #c35822;
+  width: 700rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+
+/* 按钮样式 */
+
+button {
+  margin-top: 180rpx;
+  color: white;
+  font-size: 16px;
+  background-color: #009a9a;
+  width: 408rpx;
+  height: 105rpx;
+  line-height: 105rpx;
+}
+
+.usermotto {
+  position: absolute; /*启用相对定位*/
+  left: 0rpx; /*相对于自己往右偏离150*/
+  top: 350rpx; /*相对于自己往下偏离150*/
+}
+
+icon {
+  display: inline-block;
+  font-size: 0;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+}

@@ -1,0 +1,96 @@
+page{
+    height: 100%;
+}
+/* 
+用户头像设置
+ */
+.yonghutouxiang{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    
+}
+.body{
+    height: 100%;
+    background-color: #2D3F55;
+}
+/* 
+顶部用户信息一框
+ */
+.yonghuixinxi{
+    width: 600rpx;
+    margin: 0 auto;
+    padding-bottom: 40rpx;
+    border: 2px solid #2D3F55;
+    border-bottom-color: white;
+    padding-top: 50rpx;
+}
+/* 
+左浮动
+ */
+.fl{
+    float: left;
+}
+/* 清除浮动 */
+.clearfix{
+	clear: both;
+	overflow: hidden;
+	zoom: 1;
+}
+
+/* 
+用户名样式
+ */
+.yonghuming{
+    color: white;
+    margin-left: 120rpx;
+}
+/* 
+当前的等级样式
+ */
+.dangqiandnengji{
+    font-size: 14px;
+    color: #B9B9B9;
+    margin-left: 20rpx;
+}
+/* 
+等级样式
+ */
+.dengji{
+    margin-left: 20rpx;
+    color: white;
+    font-size: 14px;
+}
+/* 
+问号扭样式
+ */
+.wenhao{
+    display: inline-block;
+    background-color: white;
+    height: 40rpx;
+    width: 40rpx;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 800;
+    line-height: 40rpx;
+    margin-left: 10px;
+}
+.fenshu{
+    float: right;
+    color: #EBC91F;
+}
+.brd{
+    margin-top: 150rpx;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 500rpx;
+}
+button{
+    color: white;
+    font-size: 16px;
+    background-color: #009A9A;
+    width: 408rpx;
+    height: 105rpx;
+    line-height: 105rpx;
+}
