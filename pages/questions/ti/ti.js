@@ -46,7 +46,7 @@ Page({
       grade: app.globalData.zong, //用户当前总分
     })
     wx.request({
-      url: 'http://192.168.137.109:8080/v1/open/one/manager/random', //后端接收信息
+      url: 'http://118.25.156.182:8080/v1/open/one/manager/random', //后端接收信息
       method: "GET",
       dataType: 'json',
       header: { //头部返回信息
@@ -79,7 +79,7 @@ Page({
     var that = this;
     if (that.data.anm == null) {//只能判断一次
       wx.request({
-        url: 'http://192.168.137.109:8080/v1/open/one/manager/submitAnswers', //发送答案给后端
+        url: 'http://118.25.156.182:8080/v1/open/one/manager/submitAnswers/{user_id}', //发送答案给后端
         method: "POST",
         dataType: 'json',
         header: { //头部返回信息

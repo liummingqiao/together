@@ -1,4 +1,3 @@
-<!--pages/welcome/welcome.wxml-->
-<text>pages/welcome/welcome.wxml</text>
-<button bindtap='dianji'></button>
-<button bindtap='dianji' >人脸登录</button>
+<view class='biaotizi'>一起考状元</view>
+<button bindtap='denglu' bindtap='dianji' >欢迎使用</button>
+<view class='jihuazi'>彩虹计划踏金小组制</view>

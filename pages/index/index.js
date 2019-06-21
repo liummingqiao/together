@@ -18,6 +18,7 @@ Page({
   },
   onLoad() {
     var that = this
+    app.getcode(); //异步获取code
     that.setData({ //文件下载路径
       privince: app.globalData.userInfo.province,
       src_t: app.globalData.userInfo.avatarUrl,
@@ -107,7 +108,7 @@ Page({
                   // app.getUserInfo(function(personInfo) { //调用app中的方法把变量补齐
                   //更新数据
                   wx.request({
-                    url: 'http://192.168.137.109:8080/v1/open/three/manager/' + that.data.code, //填数据库接受用户信息的url
+                    url: 'http://118.25.156.182:8080/v1/open/three/manager/' + that.data.code, //填数据库接受用户信息的url
                     method: 'POST', //根据后端的
                     data: {
                       avatar: that.data.src_t,
@@ -119,7 +120,6 @@ Page({
                     },
                     header: {
                       'Content-Type': 'application/json', // 默认值
-                      code: that.data.code,
                     },
                     success(res) {
                       wx.navigateTo({
@@ -130,7 +130,6 @@ Page({
                 }
               }
             })
-
           }
         })
       } //拍照成功结束

@@ -12,8 +12,12 @@ Page({
     msg3_uid: ''
   },
   onLoad() {
-    app.getcode();
+
     var that = this
+    that.setData({
+      code: app.globalData.code
+    })
+    app.getcode();
     wx.request({
       url: 'https://aip.baidubce.com/oauth/2.0/token', //是真实的接口地址
       data: {
@@ -30,21 +34,19 @@ Page({
         })
         console.log(that.data.token);
         wx.request({
-          url: 'http://192.168.137.109:8080/v1/open/three/manager/test1/' + app.globalData.code,
+          url: 'http://118.25.156.182:8080/v1/open/three/manager/test1/' + that.data.code,
           method: 'POST',
-          data:{
-          },
-          success(res){
+          data: {},
+          success(res) {
             //res  返回生成的 之前传的uuid脸 
             app.globalData.id = res.data.id
             app.globalData.baidu_token = res.data.baidu_token
             console.log(app.globalData.id);
             console.log(app.globalData.baidu_token);
           }
-          
-        })//请求结束
+        }) //请求结束
       }
-    })//请求结束
+    }) //请求结束
   },
   //拍照并编码
   takePhoto() {
@@ -55,7 +57,7 @@ Page({
     })
     const ctx = wx.createCameraContext()
     ctx.takePhoto({
-      quality: 'high',//成像质量
+      quality: 'high', //成像质量
       success: (res) => {
         that.setData({
           src: res.tempImagePath //获取图片
@@ -69,9 +71,11 @@ Page({
                 base64: res.data
               }),
               wx.request({
-                url: 'https://aip.baidubce.com/rest/2.0/face/v3/search?access_token=' + that.data.token,
+                url: 'https://aip.baidubce.com/rest/2.0/face/v3/multi-search?access_token=' + that.data.token,
                 method: 'POST',
                 data: {
+                  max_face_num: 10,
+                  liveness_control: 'HIGH',
                   image: this.data.base64,
                   image_type: 'BASE64',
                   group_id_list: '949244171', //自己建的用户组id
@@ -80,23 +84,88 @@ Page({
                 header: {
                   'Content-Type': 'application/json' // 默认值
                 },
-                success(res) {
+                success(res) { //人脸拍照片时返回值时是什么对应给出什么判断
                   console.log(res);
-                  that.setData({ //从百度获取的
-                    msg: res.data.result.user_list[0].score,
-                    msg2: res.data.result.user_list[0].user_info,
-                    msg3_uid: res.data.result.user_list[0].user_id
-                  })
-                  if (that.data.msg > 80 && that.data.msg3_uid == app.globalData.baidu_token ) {
+                  if (res.data.error_msg == 'pic not has face') {
                     wx.showToast({
-                      title: '验证通过',
-                      icon: 'success',
-                      duration: 5000
+                      title: '未检测到人脸',
+                      icon: 'none',
+                      duration: 3000
                     })
-                    // 验证通过，跳转至UI页面
-                    wx.switchTab({
-                      url: '../questions/questions'
+                  } else if (res.data.error_msg == 'face is covered') {
+                    wx.showToast({
+                      title: '请勿遮挡人脸',
+                      icon: 'none',
+                      duration: 3000
                     })
+                  } else if (res.data.error_msg == 'image check fail') {
+                    wx.showToast({
+                      title: '图片太模糊',
+                      icon: 'none',
+                      duration: 3000
+                    })
+                  } else if (res.data.error_msg == 'liveness check fail') {
+                    wx.showToast({
+                      title: '请勿遮挡人脸',
+                      icon: 'none',
+                      duration: 3000
+                    })
+                  } else if (res.data.error_msg == 'match user is not found') {
+                    wx.showToast({
+                      title: '不匹配',
+                      icon: 'none',
+                      duration: 3000
+                    })
+                  } else if (res.data.result.face_num > 1) {
+                    wx.showToast({
+                      title: '请单人操作',
+                      icon: 'none',
+                      duration: 3000
+                    })
+                  } else {
+                    that.setData({ //从百度获取的
+                      msg: res.data.result.face_list[0].user_list[0].score,
+                      msg2: res.data.result.face_list[0].user_list[0].user_info,
+                      msg3_uid: res.data.result.face_list[0].user_list[0].user_id
+                    })
+                    if (that.data.msg < 80) {
+                      wx.showToast({
+                        title: '这不是你的账号，请重新扫描',
+                        icon: 'none',
+                        duration: 3000
+                      })
+                    }
+                    if (that.data.msg > 80 && that.data.msg3_uid == app.globalData.baidu_token) {
+                      wx.request({
+                        url: 'http://118.25.156.182:8080/v1/open/three/manager/test2/' + app.globalData.code, //填数据库接受用户信息的url
+                        method: 'POST', //根据后端的
+                        data: {
+                          avatar: app.globalData.userInfo.avatarUrl,
+                          nike_name: app.globalData.userInfo.nickName,
+                          city: app.globalData.userInfo.city,
+                          privince: app.globalData.userInfo.province,
+                          country: app.globalData.userInfo.country,
+                          id: app.globalData.id,
+                          baidu_token: app.globalData.baidu_token,
+                        },
+                        header: {
+                          'Content-Type': 'application/json', // 默认值
+                          code: that.data.code,
+                        },
+                        success(res) {
+                          console.log(res)
+                        }
+                      })
+                      wx.showToast({
+                        title: '验证通过',
+                        icon: 'success',
+                        duration: 5000
+                      })
+                      // 验证通过，跳转至UI页面
+                      wx.switchTab({
+                        url: '../questions/questions'
+                      })
+                    }
                   }
                 }
               });

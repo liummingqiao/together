@@ -12,3 +12,14 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
+
+git config --global user.name  "刘明桥"
+git config --global user.email "oncwnuDFOqHr1bZKE35ko4CK63CE@git.weixin.qq.com"
+
+cd existing_folder
+git init
+git remote add origin https://git.weixin.qq.com/lmq_949244171/949244171.git
+git add .
+git commit
+git push -u origin master
+unknown@exam oncwnuDFOqHr1bZKE35ko4CK63CE@git.weixin.qq.com ple.com

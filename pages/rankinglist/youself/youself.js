@@ -23,7 +23,7 @@ Page({
     });
     var that = this
     wx.request({
-      url: 'http://192.168.137.109:8080/v1/open/two/manager/findMeById/' + id,
+      url: 'http://118.25.156.182:8080/v1/open/two/manager/findMeById/' + id,
       method: "GET",
       dataType: 'json',
       header: { //头部返回信息

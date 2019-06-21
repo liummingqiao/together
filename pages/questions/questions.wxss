@@ -12,7 +12,6 @@ page{
 }
 .body{
     height: 100%;
-    background-color: #2D3F55;
 }
 /* 
 顶部用户信息一框
@@ -21,9 +20,14 @@ page{
     width: 600rpx;
     margin: 0 auto;
     padding-bottom: 40rpx;
-    border: 2px solid #2D3F55;
+    border: 2px solid rgb(33, 38, 44);
     border-bottom-color: white;
     padding-top: 50rpx;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+
+
 }
 /* 
 左浮动

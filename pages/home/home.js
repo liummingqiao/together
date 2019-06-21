@@ -13,25 +13,33 @@ Page({
     date: '',
     level: '',
     levUp: '',
-    levDown: ''
+    levDown: '',
+    id:''
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.getcode()
     var that = this
     var DATE = util.formatTime(new Date());
     this.setData({
+      id: app.globalData.id,
       date: DATE,
     });
   },
   /**
    * 生命周期函数--监听页面显示
    */
+  tuichu(){
+    wx.redirectTo({
+      url: '../welcome/welcome',
+    })
+  },
   onShow: function () {
     var that = this
     wx.request({
-      url: 'http://192.168.137.109:8080/v1/open/two/manager/findMeById/'+ app.globalData.id,
+      url: 'http://118.25.156.182:8080/v1/open/two/manager/findMeById/'+ app.globalData.id,
       method: 'GET',
       data: {
         // id: app.globalData.id
@@ -57,4 +65,10 @@ Page({
       }
     })
   },
+  noc: function (res) {
+    console.log(res.target.dataset.current)
+    wx.navigateTo({
+      url: 'duicuozong/duicuozong?currentTab=' + res.target.dataset.current,
+    })
+  }
 })

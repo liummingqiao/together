@@ -1,4 +1,5 @@
 //app.js
+
 App({
   globalData: {
     openid: '',
@@ -17,7 +18,9 @@ App({
     index: 0,
     zong:'',
     baidu_token:'',
-    id:''
+    id:'',
+    shuaxin : true,//排行榜刷新
+    shuaxin1 : true//查询刷新
   },
   onLaunch: function() {
     var that = this

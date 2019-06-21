@@ -5,7 +5,6 @@ Page({ //设置fires中的值
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    // canIUse: wx.canIUse('button.open-type.getUserInfo'),//判断小程序的API，回调，参数，组件等是否在当前版本可用
     rl: '人脸注册',
     openid: '',
     session_key: '',
@@ -15,6 +14,7 @@ Page({ //设置fires中的值
   },
   onLoad: function() {
     wx.getUserInfo({ //运行之前必须是授权过
+      lang:'zh_CN',
       success: res => {
         app.globalData.userInfo = res.userInfo
         this.setData({
@@ -29,7 +29,7 @@ Page({ //设置fires中的值
     var that = this;
     app.getcode(); //异步获取code
     wx.request({ //查看是否有重复的POENid
-      url: 'http://192.168.137.109:8080/v1/open/three/manager/test2/' + app.globalData.code, //后端用户信息接
+      url: 'http://118.25.156.182:8080/v1/open/three/manager/test2/' + app.globalData.code, //后端用户信息接
       method: "PUT",
       dataType: 'json',
       header: { //头部返回信息
@@ -69,5 +69,4 @@ Page({ //设置fires中的值
       url: '../index/index'
     })
   },
-
 })

@@ -1,1 +1,28 @@
 /* pages/welcome/welcome.wxss */
+
+.biaotizi {
+  font-size: 100rpx;
+  margin-top: 50rpx;
+  text-align: center;
+  color: white;
+}
+
+button {
+  margin-top: 50rpx;
+  color: white;
+  font-size: 16px;
+  background-color: #009a9a;
+  width: 408rpx;
+  height: 105rpx;
+  line-height: 105rpx;
+  margin-top: 1000rpx;
+}
+
+.jihuazi {
+  font-size: 24rpx;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 267rpx;
+}

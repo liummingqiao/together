@@ -1,0 +1,70 @@
+/**index.wxss**/
+
+.swiper-tab {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+swiper-item {
+  font-size: 30rpx;
+  overflow: scroll;
+}
+
+swiper-item scroll-view {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.nidexuanze {
+  display: flex;
+}
+
+.nidexuanze>view {
+  flex: 1;
+  text-align: center;
+}
+
+.tikuang {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tikuang>view {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.nixuanze {
+  color: #259b24;
+}
+
+.yidaotizongkuang {
+  border-bottom: 1rpx solid #d5d5d5;
+}
+
+.yidaotizongkuang>view {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}

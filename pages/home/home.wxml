@@ -1,44 +1,63 @@
 <!--pages/home/home.wxml-->
 <view class='top'>
-    <view class='clearfix'>
-        <image class='yonghutouxiang fl' src='{{userInfo.avatar}}'></image><view class='yonghuming'>{{userInfo.nike_name}}</view>
+  <view class='clearfix'>
+    <image class='yonghutouxiang fl' src='{{userInfo.avatar}}'></image>
+    <view class='yonghuming'>{{userInfo.nike_name}} ID号:{{id}}
+      <button class='tuichu' catchtap='tuichu'>退出</button>
     </view>
-    <view class='dengjizi'>{{level}}</view>
-    <view class='fenshuyihang'>
-        <text>{{userInfo.total_score}}</text><text>{{userInfo.day_total_score}}分</text><text class='mingcizuobianju'>第</text><text>{{userInfo.rownum}}</text><text>名</text>
-    </view>
-    <view class='tishuyihang'>
-        <text>{{answer.total_answer_number}}</text><text>{{answer.correct_answer_number}}</text><text>{{answer.fail_answer_number}}</text>
-    </view>
-    <view class='tishuyihang'>
-        <text>答题总量</text><text>正确</text><text>错误</text>
-    </view>
-    <view class='shanchangzhishi'>
-        擅长知识领域:<text wx-if="{{ field == '' }}">尚无擅长领域</text><text>{{field[0].knowledge_area}}</text><text>{{field[1].knowledge_area}}</text><text>{{field[2].knowledge_area}}</text>
-    </view>
+  </view>
+  <view class='dengjizi'>{{level}}</view>
+  <view class='fenshuyihang'>
+    <text>{{userInfo.total_score}}</text>
+    <text>{{userInfo.day_total_score}}分</text>
+    <text class='mingcizuobianju'>第</text>
+    <text>{{userInfo.rownum}}</text>
+    <text>名</text>
+  </view>
+
+  <view class='tishuyihang'>
+    <text bindtap='noc' data-current="0">{{answer.total_answer_number}}</text>
+    <text bindtap='noc' data-current="1">{{answer.correct_answer_number}}</text>
+    <text bindtap='noc' data-current="2">{{answer.fail_answer_number}}</text>
+  </view>
+  <view class='tishuyihang'>
+    <text bindtap='noc' data-current="0">答题总量</text>
+    <text bindtap='noc' data-current="1">正确</text>
+    <text bindtap='noc' data-current="2">错误</text>
+  </view>
+  <view class='shanchangzhishi'>
+    擅长知识领域:
+    <text wx-if="{{ field == '' }}">尚无擅长领域</text>
+    <text>{{field[0].knowledge_area}}</text>
+    <text>{{field[1].knowledge_area}}</text>
+    <text>{{field[2].knowledge_area}}</text>
+  </view>
 </view>
 <view class='duanweikuang'>
-    <view class='duanwei'>
-        <text class='shengji'>↑ 升级</text><text>{{levUp}}</text>
-    </view>
-    <view class='duanwei dwno2'>
-        <text class='jiangji'>↓ 降级</text><text>{{levDown}}</text>
-    </view>
+  <view class='duanwei'>
+    <text class='shengji'>↑ 升级</text>
+    <text>{{levUp}}</text>
+  </view>
+  <view class='duanwei dwno2'>
+    <text class='jiangji'>↓ 降级</text>
+    <text>{{levDown}}</text>
+  </view>
 </view>
 <view class='meicidatixinxiwaikuang clearfix'>
-    <view class='fl zuobianju yidiandian'>每天进步一点点</view>
-    <view class='cl zuobianju yidiandian' wx-if="{{ record == '' }}">
-      <text>尚无答题记录，请先答题</text>
+  <view class='fl zuobianju yidiandian'>每天进步一点点</view>
+  <view class='cl zuobianju yidiandian' wx-if="{{ record == '' }}">
+    <text>尚无答题记录，请先答题</text>
+  </view>
+  <!-- v-for从这里开始 -->
+  <view class='meicidatixinxineikuang clearfix' wx:for="{{record}}" wx:for-item="item" wx:key="{{index}}">
+    <view class='clearfix'>
+      <view class='fl zuobianju'>{{item.answer_date}}</view>
     </view>
-    <!-- v-for从这里开始 -->
-    <view class='meicidatixinxineikuang clearfix' wx:for="{{record}}" wx:for-item="item" wx:key="{{index}}">
-        <view class='clearfix'>
-            <view class='fl zuobianju'>{{item.answer_date}}</view>
-        </view>
-        <view class='meicidatixinxi fl'>
-            <text class='zuobianju'>答题: {{item.total_answer_number}}</text><text class='dati'>答对: {{item.correct_answer_number}}</text><text class='dati'>答错: {{item.fail_answer_number}}</text><text class='defen'>得分: {{item.day_total_score}}</text>
-        </view>
+    <view class='meicidatixinxi fl'>
+      <text class='zuobianju'>答题: {{item.total_answer_number}}</text>
+      <text class='dati'>答对: {{item.correct_answer_number}}</text>
+      <text class='dati'>答错: {{item.fail_answer_number}}</text>
+      <text class='defen'>得分: {{item.current_total_score}}</text>
     </view>
+  </view>
 </view>
-
-
