@@ -1,3 +1,4 @@
+
 <view class='biaotizi'>一起考状元</view>
 <button bindtap='denglu' bindtap='dianji' >欢迎使用</button>
 <view class='jihuazi'>彩虹计划踏金小组制</view>

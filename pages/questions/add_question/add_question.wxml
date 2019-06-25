@@ -1,0 +1,45 @@
+<!--第一部分-->
+<view class='all_box'>
+  <view class='head'>新增试题
+    <view class='question_bank'>题库总题
+      <image src='../../images/icon_CSR_HL.png'></image>
+    </view>
+  </view>
+  <!-- 第二部分 -->
+  <view class='stem'>
+    <view class='stem_timu'>题目</view>
+    <input placeholder='请输入题目' class='input'></input>
+    <view class='type' bindtap='show'>{{type}}</view>
+  </view>
+</view>
+<view class='xiala_zong' wx:if="{{pd}}">
+  <block wx:for="{{type_zong}}" wx:for-item="item">
+    <view class='xiala_item' data-type='{{item}}' catchtap='change'>{{item}}</view>
+  </block>
+</view>
+<!-- 第三部分 -->
+<view class='add_option'>
+  <view class='add_head'>
+    填加选项
+    <view class='jiahao' catchtap='addOption' data-length='{{shuzu.length}}'>＋</view>
+  </view>
+  <view class='add_change'>
+    <text class='text1'>选项文字</text>
+    <text>正确答案</text>
+    <text>状态</text>
+  </view>
+  <view class='add_adcd' >
+  <block  wx:for="{{options}}" wx:for-item="item" wx:key="index">
+  <view class='vf_all'>
+  <view class='option_text'>
+  <view class='stem_timu'>{{item.option}}</view>
+  <input placeholder='选项{{index+1}}' data-index='{{index}}' class='input1' wx:key="id" bindinput="onOptionContentInput" value="{{item.content}}"></input>
+  <checkbox class= "ch" checked='{{item.rightAnwser}}' ></checkbox>
+   <view class='cuohao' catchtap='delOption' data-index='{{index}}'>×</view>
+  </view>
+  <view class='true'></view>
+   <view class='state'></view>
+   </view>
+  </block>
+  </view>
+</view>

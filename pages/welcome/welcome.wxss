@@ -2,15 +2,14 @@
 
 .biaotizi {
   font-size: 100rpx;
-  margin-top: 50rpx;
+  padding-top: 50rpx;
   text-align: center;
   color: white;
 }
 
 button {
-  margin-top: 50rpx;
   color: white;
-  font-size: 16px;
+  font-size: 32rpx;
   background-color: #009a9a;
   width: 408rpx;
   height: 105rpx;
@@ -19,10 +18,10 @@ button {
 }
 
 .jihuazi {
+  padding-top: 130rpx;
   font-size: 24rpx;
   color: white;
   text-align: center;
-  position: absolute;
-  bottom: 0px;
+  bottom: 0rpx;
   left: 267rpx;
 }

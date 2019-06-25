@@ -39,6 +39,10 @@ Page({
           data: {},
           success(res) {
             //res  返回生成的 之前传的uuid脸 
+            wx.setStorage({
+              key: 'userId',    //通过key将用户信息进行保存
+              data: res.data.id    //获取本地用户信息缓存进data
+            })
             app.globalData.id = res.data.id
             app.globalData.baidu_token = res.data.baidu_token
             console.log(app.globalData.id);

@@ -36,6 +36,11 @@ Page({
       }
     })
   },
+  addQuestions(){
+    wx.navigateTo({
+      url: 'add_question/add_question',
+    })
+  },
   denglu() {
     wx.navigateTo({
       url: 'ti/ti',

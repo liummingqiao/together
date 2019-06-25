@@ -20,7 +20,8 @@ App({
     baidu_token:'',
     id:'',
     shuaxin : true,//排行榜刷新
-    shuaxin1 : true//查询刷新
+    shuaxin1 : true,//查询刷新
+    shuzu: ["A", "B"]
   },
   onLaunch: function() {
     var that = this

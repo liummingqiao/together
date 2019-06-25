@@ -16,14 +16,14 @@
   </view>
 
   <view class='tishuyihang'>
-    <text bindtap='noc' data-current="0">{{answer.total_answer_number}}</text>
-    <text bindtap='noc' data-current="1">{{answer.correct_answer_number}}</text>
-    <text bindtap='noc' data-current="2">{{answer.fail_answer_number}}</text>
+    <text bindtap='noc' data-current="2">{{answer.total_answer_number}}</text>
+    <text bindtap='noc' data-current="0">{{answer.correct_answer_number}}</text>
+    <text bindtap='noc' data-current="1">{{answer.fail_answer_number}}</text>
   </view>
   <view class='tishuyihang'>
-    <text bindtap='noc' data-current="0">答题总量</text>
-    <text bindtap='noc' data-current="1">正确</text>
-    <text bindtap='noc' data-current="2">错误</text>
+    <text bindtap='noc' data-current="2">答题总量</text>
+    <text bindtap='noc' data-current="0">正确</text>
+    <text bindtap='noc' data-current="1">错误</text>
   </view>
   <view class='shanchangzhishi'>
     擅长知识领域:

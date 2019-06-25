@@ -1,57 +1,72 @@
 <!--index.wxml-->
 <view class="swiper-tab">
-    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">总记录</view>
-    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">正确记录</view>
-    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">错题记录</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">总记录</view>
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">正确记录</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">错题记录</view>
 </view>
 
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
-    <!-- 我是哈哈 -->
-    <swiper-item>
-        <scroll-view scroll-y="true">
-        <view class='yidaotizongkuang'>
-            <view class='tikuang clearfix'>
-                <view class='riqi'>今天</view>
-                <view>红葡萄酒是用什么葡萄？asdfsf红葡萄酒是用什么葡萄？红葡萄酒是用什么葡萄？<text class='fr'>类型:常识</text></view>
-                <view>A:白葡萄</view>
-                <view>B:红葡萄</view>
-            </view>
-            <view class='nidexuanze'>
-                <view class='nixuanze'>你选择答案:A</view><view>你选择答案:A</view>
-            </view>
+  <!-- 我是哈哈 -->
+  <swiper-item>
+    <scroll-view scroll-y="true">
+      <view class='yidaotizongkuang' wx:for="{{questionInfo}}" wx:for-item="item">
+        <!-- <block wx:for="{{questionInfo}}" wx:for-item="item"> -->
+        <view class='tikuang clearfix'>
+          <view class='riqi'>{{userAnswersInfo[index].createdDate}}</view>
+          <view>{{item.content}}
+            <text class='fr'>类型:{{item.area}}</text>
+          </view>
+          <view>A:白葡萄</view>
+          <view>B:红葡萄</view>
         </view>
-        </scroll-view>
-    </swiper-item>
-    <!-- 我是呵呵 -->
-    <swiper-item>
-      <scroll-view scroll-y="true">
-            <view class='yidaotizongkuang'>
-            <view class='tikuang clearfix'>
-                <view class='riqi'>今天</view>
-                <view>红葡萄酒是用什么葡萄？asdfsf红葡萄酒是用什么葡萄？红葡萄酒是用什么葡萄？<text class='fr'>类型:常识</text></view>
-                <view>A:白葡萄</view>
-                <view>B:红葡萄</view>
-            </view>
-            <view class='nidexuanze'>
-                <view class='nixuanze'>你选择答案:A</view><view>你选择答案:A</view>
-            </view>
+        <view class='nidexuanze'>
+          <view class='nixuanze'>正确答案:{{userAnswersInfo[index].answer}}</view>
+          <view>你选择答案:{{userAnswersInfo[index].comment_answer}}</view>
         </view>
-        </scroll-view>
-    </swiper-item>
-    <!-- 我是嘿嘿 -->
-    <swiper-item>
-      <scroll-view scroll-y="true">
-            <view class='yidaotizongkuang'>
-            <view class='tikuang clearfix'>
-                <view class='riqi'>今天</view>
-                <view>红葡萄酒是用什么葡萄？asdfsf红葡萄酒是用什么葡萄？红葡萄酒是用什么葡萄？<text class='fr'>类型:常识</text></view>
-                <view>A:白葡萄</view>
-                <view>B:红葡萄</view>
-            </view>
-            <view class='nidexuanze'>
-                <view class='nixuanze'>你选择答案:A</view><view>你选择答案:A</view>
-            </view>
+        <!-- </block> -->
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 我是呵呵 -->
+  <swiper-item>
+    <scroll-view scroll-y="true">
+      <view class='yidaotizongkuang' wx:for="{{questionInfo}}" wx:for-item="item">
+        <!-- <block wx:for="{{questionInfo}}" wx:for-item="item"> -->
+        <view class='tikuang clearfix'>
+          <view class='riqi'>{{userAnswersInfo[index].createdDate}}</view>
+          <view>{{item.content}}
+            <text class='fr'>类型:{{item.area}}</text>
+          </view>
+          <view>A:白葡萄</view>
+          <view>B:红葡萄</view>
         </view>
-        </scroll-view>
-    </swiper-item>
+        <view class='nidexuanze'>
+          <view class='nixuanze'>正确答案:{{userAnswersInfo[index].answer}}</view>
+          <view>你选择答案:{{userAnswersInfo[index].comment_answer}}</view>
+        </view>
+        <!-- </block> -->
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 我是嘿嘿 -->
+  <swiper-item>
+    <scroll-view scroll-y="true">
+      <view class='yidaotizongkuang' wx:for="{{questionInfo}}" wx:for-item="item">
+        <!-- <block wx:for="{{questionInfo}}" wx:for-item="item"> -->
+        <view class='tikuang clearfix'>
+          <view class='riqi'>{{userAnswersInfo[index].createdDate}}</view>
+          <view>{{item.content}}
+            <text class='fr'>类型:{{item.area}}</text>
+          </view>
+          <view>A:白葡萄</view>
+          <view>B:红葡萄</view>
+        </view>
+        <view class='nidexuanze'>
+          <view class='nixuanze'>正确答案:{{userAnswersInfo[index].answer}}</view>
+          <view>你选择答案:{{userAnswersInfo[index].comment_answer}}</view>
+        </view>
+        <!-- </block> -->
+      </view>
+    </scroll-view>
+  </swiper-item>
 </swiper>

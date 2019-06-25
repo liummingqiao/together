@@ -8,5 +8,6 @@
         </view>
     </view>
     <view class='brd'>一起考状元</view>
+    <button bindtap='addQuestions' class='new_question'>新增试题</button>
     <button bindtap='denglu'>开始答题</button>
 </view>

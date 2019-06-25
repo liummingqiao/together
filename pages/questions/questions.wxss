@@ -88,7 +88,7 @@ page{
     text-align: center;
     font-size: 50px;
     color: white;
-    margin-bottom: 500rpx;
+    margin-bottom: 400rpx;
 }
 button{
     color: white;
@@ -97,4 +97,7 @@ button{
     width: 408rpx;
     height: 105rpx;
     line-height: 105rpx;
+}
+.new_question{
+  margin-bottom: 50rpx
 }

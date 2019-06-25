@@ -10,11 +10,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    wx.showToast({
-      title: '请重试',
-      icon: 'loading',
-      duration: 2000
-    })
   },
  dianji(
 

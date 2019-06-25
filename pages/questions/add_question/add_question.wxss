@@ -1,0 +1,156 @@
+/* pages/questions/add_question/add_question.wxss */
+
+.all_box {
+  
+}
+
+.head {
+  font-weight: 700;
+  padding-left: 20rpx;
+  height: 130rpx;
+  font-size: 70rpx;
+  color: white;
+  margin-top: 20rpx;
+  border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.question_bank {
+  margin-top: 25rpx;
+  margin-right: 20rpx;
+  float: right;
+  font-size: 50rpx;
+}
+
+.question_bank image {
+  margin-left: 10rpx;
+  height: 50rpx;
+  width: 50rpx;
+  margin-top: 10rpx;
+  float: right;
+}
+
+.stem {
+  height: 180rpx;
+  padding-left: 60rpx;
+  padding-top: 100rpx;
+  border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.stem_timu {
+  text-align: center;
+  width: 100rpx;
+  height: 80rpx;
+  background-color: #f5f7fa;
+  border-bottom-left-radius: 20%;
+  border-top-left-radius: 20%;
+  line-height: 2;
+  float: left;
+}
+
+.input {
+  height: 80rpx;
+  width: 400rpx;
+  background: white;
+  float: left;
+}
+
+.input1 {
+  height: 80rpx;
+  width: 200rpx;
+  background: white;
+  float: left;
+  border-bottom-right-radius: 15%;
+  border-top-right-radius: 15%;
+}
+
+.type {
+  text-align: center;
+  width: 100rpx;
+  height: 80rpx;
+  background-color: #f5f7fa;
+  border-bottom-right-radius: 20%;
+  border-top-right-radius: 20%;
+  line-height: 2;
+  float: left;
+}
+
+.xiala_zong {
+  width: 100rpx;
+  position: absolute;
+  left: 560rpx;
+  top: 335rpx;
+}
+
+.xiala_item {
+  width: 100rpx;
+  height: 80rpx;
+  font-size: 40rpx;
+  background: #f5f7fa;
+  border-bottom: 1px solid black;
+  text-align: center;
+  line-height: 2;
+  border-bottom-right-radius: 20%;
+  border-top-right-radius: 20%;
+}
+
+.add_head {
+  padding-top: 30rpx;
+  padding-left: 100rpx;
+  height: 100rpx;
+  color: white;
+  font-weight: 700;
+  font-size: 50rpx;
+}
+
+.jiahao {
+  display: inline-block;
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50%;
+  background: #32e2d5;
+  color: white;
+  text-align: center;
+}
+
+.add_change {
+  margin-top: 40rpx;
+  height: 50rpx;
+  color: white;
+}
+.add_change text{
+  margin-left: 110rpx;
+}
+/* 循环整体 */
+
+.add_adcd {
+}
+
+.vf_all {
+  height: 100rpx;
+}
+
+.option_text {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.ch{
+  margin-left: 100rpx;
+  border-radius: 50%;
+  /* width: 80rpx;
+  height: 80rpx;
+  display: inline-block; */
+  line-height: 2
+  
+}
+.cuohao {
+  display: inline-block;
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50%;
+  background: red;
+  color: black;
+  text-align: center;
+  font-size: 50rpx;
+  margin-left: 150rpx;
+  
+}

@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/welcome/welcome", 
+    "pages/welcome/welcome",
+    "pages/questions/add_question/add_question",
     "pages/home/home",
     "pages/home/duicuozong/duicuozong",
     "pages/rankinglist/rankinglist",
