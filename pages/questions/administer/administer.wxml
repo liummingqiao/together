@@ -1,0 +1,45 @@
+<!--第一部分-->
+<view class='all_box'>
+  <view class='head'>
+    <view>新增试题</view>
+    <view class='question_bank' catchtap='itemBank'>
+      <view>题库总题</view>
+      <image src='../../images/itemBank.png'></image>
+    </view>
+  </view>
+  <!-- 第二部分 -->
+  <view class='stem'>
+    <view class='stem_timu'>题目</view>
+    <input placeholder='请输入题目' class='input' value='{{content}}' bindinput='content'></input>
+    <picker mode='selector' class='type' bindchange="select" value="{{index}}" range='{{type_zong}}'>{{type_zong[index]}}</picker>
+  </view>
+</view>
+<!-- 第三部分 -->
+<view class='add_option'>
+  <view class='add_head'>
+    填加选项
+    <view class='jiahao' catchtap='addOption' data-length='{{shuzu.length}}'>＋</view>
+  </view>
+  <view class='add_change'>
+    <text class='text1'>选项文字</text>
+    <text>正确答案</text>
+    <text>状态</text>
+  </view>
+  <view class='add_adcd'>
+    <radio-group bindchange="radio">
+      <block wx:for="{{options}}" wx:for-item="item" wx:key="index">
+        <view class='vf_all'>
+          <view class='option_text'>
+            <view class='stem_timu'>{{item.option}}</view>
+            <input placeholder='选项{{index+1}}' data-index='{{index}}' class='input1' wx:key="id" bindinput="onOptionContentInput" value="{{item.content}}" bindinput='option'></input>
+            <radio class="ch" value='{{index}}' checked='{{item.rightAnwser}}'></radio>
+            <view class='cuohao' catchtap='delOption' data-index='{{index}}'>×</view>
+          </view>
+          <view class='true'></view>
+          <view class='state'></view>
+        </view>
+      </block>
+    </radio-group>
+  </view>
+  <button class='button' catchtap='add'>确认新增</button>
+</view>

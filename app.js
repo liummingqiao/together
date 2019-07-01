@@ -21,7 +21,8 @@ App({
     id:'',
     shuaxin : true,//排行榜刷新
     shuaxin1 : true,//查询刷新
-    shuzu: ["A", "B"]
+    shuzu: ["A", "B"],
+    http: 'http://118.25.156.182:8080/v1/open/'
   },
   onLaunch: function() {
     var that = this

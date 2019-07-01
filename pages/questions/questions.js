@@ -38,7 +38,7 @@ Page({
   },
   addQuestions(){
     wx.navigateTo({
-      url: 'add_question/add_question',
+      url: 'administer/administer',
     })
   },
   denglu() {

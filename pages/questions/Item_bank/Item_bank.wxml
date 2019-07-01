@@ -1,0 +1,26 @@
+<!--pages/questions/Item_bank/Item_bank.wxml-->
+<view class='body'>
+  <view class='search' id='search'>
+    <input type='text' placeholder='搜索总题库' bindinput='search' value='{{search}}'></input>
+  </view>
+  <scroll-view scroll-y='true' bindscrolltolower='paging' lower-threshold='1' style="max-height:{{scrollHeight}}px">
+    <view class='main' wx:for="{{stem}}" wx:key="{{index}}" wx:for-item="item">
+      <view class='stems'>
+        <text class='stem'>{{item.content}}</text>
+        <text class='type'>({{item.area}})</text>
+      </view>
+      <view class='option' wx:key="{{index}}" wx:for="{{stem[index].options}}" wx:for-item="option">
+        <view>{{option.content}}</view>
+      </view>
+      <view class='option'>正确答案：{{item.answer}}</view>
+      <view class='image'>
+        <view class='modify' catchtap='modify' data-id='{{item.id}}'>
+          <image src='../../images/modify.png'></image>
+        </view>
+        <view class='delete' catchtap='deletes' data-search='{{search}}' data-id='{{item.id}}'>
+          <image src='../../images/delete.png'></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
